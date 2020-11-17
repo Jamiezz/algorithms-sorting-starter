@@ -22,15 +22,15 @@ function selectionSort(list) {
     }
     swap(list, i, minIdx)
   }
-
-
-
+  return list
 }
 
 let testArr = [1, 4, 3, 2]
+
               // i
-                //  j
-              //minIdx=2
+                    //  j
+              //minIdx=3
+//let testArr = [1, 2, 3, 4]
 
 
 module.exports = {
