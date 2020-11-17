@@ -18,7 +18,7 @@ function quickSort(array) {
   //   put all values greater than the pivot value into an array called right
   let right = [];
   for (let i = 0; i < array.length; i++) {
-    if (array[i] > pivot) {
+    if (array[i] >= pivot) {
       right.push(array[i]);
     }
   }
@@ -26,12 +26,17 @@ function quickSort(array) {
   let leftSorted = quickSort(left)
   //   call quick sort on right and assign the return value to rightSorted
   let rightSorted = quickSort(right)
+  console.log(leftSorted)
+  console.log(pivot)
+  console.log(rightSorted)
   //   return the concatenation of leftSorted, the pivot value, and rightSorted
-  return leftSorted.concat(pivot).concat(rightSorted)
-  //return [...leftSorted, ...rightSorted]
+  // return leftSorted.concat(pivot).concat(rightSorted)
+  return [...leftSorted, pivot, ...rightSorted]
   // end procedure
 }
 
+let testList = [9,1,7,6,6,5,10]
+console.log(quickSort(testList))
 
 module.exports = {
   quickSort
